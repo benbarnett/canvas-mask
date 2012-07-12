@@ -44,7 +44,12 @@ THE SOFTWARE.
 */
 function applyCanvasMask(image, mask, width, height, asBase64) {
 	// check we have Canvas, and return the unmasked image if not
-	if (!document.createElement('canvas').getContext) return image;
+	if (!document.createElement('canvas').getContext && !asBase64) {
+		return image;
+	}
+	else if (!document.createElement('canvas').getContext && asBase64) {
+		return image.src;
+	}
 	
 	var bufferCanvas = document.createElement('canvas'),
 		buffer = bufferCanvas.getContext('2d'),
