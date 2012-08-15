@@ -31,16 +31,19 @@ Simply pass in two image elements (pre-loaded, as shown on demo), the width and 
 
 By default the function will return Canvas pixel data which you can then use to draw on to a Canvas. For example:
 
+```javascript
 output.putImageData(
 	applyCanvasMask(<BASE IMAGE>, <MASK IMAGE>, width, height), 0, 0, 0, 0, width, height
 );
+```
 
 Alternatively, you can specify a 5th parameter to have the function return the masked image as a Base64 encoded data URL. This is useful for applying to background images. For example:
 
+```javascript
 $('body').css({
 	'background-image': 'url(' + applyCanvasMask(<BASE IMAGE>, <MASK IMAGE>, width, height, true) + ')'
 });
-
+```
 
 Changelog
 -----------------
