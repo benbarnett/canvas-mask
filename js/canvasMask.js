@@ -83,10 +83,11 @@ function applyCanvasMask(image, mask, width, height, asBase64) {
 	
 	// loop through alpha mask and apply alpha values to base image
 	for (var i = 3, len = imageData.length; i < len; i = i + 4) {
-		//imageData[i] = alphaData[i];
-		if (alphaData[i] == 0) {
-			imageData[i] = 0;
+
+		if (imageData[i] > alphaData[i]) {
+			imageData[i] = alphaData[i]
 		}
+			
 	}
 
 	// return the pixel data with alpha values applied
