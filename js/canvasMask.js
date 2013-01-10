@@ -1,5 +1,5 @@
 /*
-Canvas Mask Utility v0.1
+Canvas Mask Utility v0.2
 Use HTML5 Canvas to apply an alpha mask to an image element.
 ---
 http://github.com/benbarnett/canvas-mask

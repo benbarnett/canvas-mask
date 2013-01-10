@@ -48,6 +48,11 @@ $('body').css({
 Changelog
 -----------------
 
+
+0.2 (10/01/2013):
+
+* Merge pull request #3 - allow two transparent pngs to mask
+
 0.1 (02/06/2011):
 
 * Initial release.
